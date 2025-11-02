@@ -51,7 +51,7 @@ export default function PostCard({ project }: PostCardProps) {
   };
 
   return (
-    <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all">
+    <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex">
         {/* Upvote section */}
         <div className="flex flex-col items-center bg-gray-50 dark:bg-gray-900 p-4 rounded-l-lg">
@@ -88,7 +88,7 @@ export default function PostCard({ project }: PostCardProps) {
 
           {/* Title */}
           <Link href={`/project/${project.slug}`}>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 transition-colors mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-200 mb-2 hover:translate-x-1">
               {project.title}
             </h2>
           </Link>
@@ -103,7 +103,7 @@ export default function PostCard({ project }: PostCardProps) {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer"
+                className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200 cursor-pointer hover:scale-105"
               >
                 {tag}
               </span>
@@ -128,7 +128,7 @@ export default function PostCard({ project }: PostCardProps) {
                   href={project.repo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+                  className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-200 hover:scale-110"
                   aria-label="View on GitHub"
                 >
                   <Github className="h-4 w-4" />
@@ -139,7 +139,7 @@ export default function PostCard({ project }: PostCardProps) {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+                  className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-200 hover:scale-110"
                   aria-label="View live demo"
                 >
                   <ExternalLink className="h-4 w-4" />

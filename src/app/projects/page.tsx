@@ -1,4 +1,5 @@
 import PostFeed from "@/components/PostFeed";
+import PageHero from "@/components/PageHero";
 import { projects, getAllTags } from "@/lib/projects";
 import { Code2 } from "lucide-react";
 import type { Metadata } from 'next';
@@ -13,22 +14,18 @@ export default function ProjectsPage() {
 
   return (
     <div className="space-y-8">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4 flex items-center gap-3">
-          <Code2 className="h-10 w-10" />
-          All Projects
-        </h1>
-        <p className="text-xl opacity-90">
-          Explore my portfolio of full-stack applications, backend systems, and ML/data science projects
-        </p>
-        <div className="mt-4 text-sm opacity-80">
-          {projects.length} projects • Filter by technology to find what interests you
-        </div>
-      </div>
+      <PageHero
+        title={<span className="flex items-center gap-3"><Code2 className="h-8 w-8" />r/All_Projects</span>}
+        subtitle={`Explore my portfolio of full-stack applications, backend systems, and ML/data science projects`}
+      />
 
       {/* Projects Feed with Filter */}
-      <PostFeed projects={projects} allTags={allTags} />
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="mt-4 text-sm opacity-80 animate-in fade-in slide-in-from-bottom-2 duration-700 delay-300">{projects.length} projects • Filter by technology to find what interests you</div>
+        <div className="mt-6 animate-in fade-in slide-in-from-bottom-3 duration-700 delay-500">
+          <PostFeed projects={projects} allTags={allTags} />
+        </div>
+      </div>
     </div>
   );
 }

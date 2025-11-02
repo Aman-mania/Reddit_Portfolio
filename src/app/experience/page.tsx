@@ -1,5 +1,6 @@
 import { Briefcase, Calendar, MapPin, ExternalLink, Code2, Database, Server, Zap, CheckCircle2, TrendingUp, Building, Linkedin } from 'lucide-react';
 import type { Metadata } from 'next';
+import PageHero from '@/components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Experience - Aman Biswakarma',
@@ -8,14 +9,10 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
   return (
-    <div className="max-w-5xl mx-auto space-y-8">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4">Professional Experience</h1>
-        <p className="text-xl opacity-90">
-          Building scalable backend systems and real-time logistics solutions
-        </p>
-      </div>
+    <div className="space-y-8">
+      <PageHero title="r/Professional_Experience" subtitle="Building scalable backend systems and real-time logistics solutions" />
+
+      <div className="max-w-4xl mx-auto px-4 space-y-8">
 
       {/* Timeline indicator */}
       <div className="flex items-center gap-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4">
@@ -251,9 +248,9 @@ export default function ExperiencePage() {
               Impact Metrics
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 rounded-lg p-4">
+              <div className="group bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 rounded-lg p-4 hover:translate-x-2 transition-transform duration-300">
                 <div className="flex items-start gap-3">
-                  <Zap className="h-8 w-8 text-orange-600 dark:text-orange-400" />
+                  <Zap className="h-8 w-8 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-gray-100">Notification System</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -263,9 +260,9 @@ export default function ExperiencePage() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-lg p-4">
+              <div className="group bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-lg p-4 hover:translate-x-2 transition-transform duration-300">
                 <div className="flex items-start gap-3">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">25%</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300">25%</div>
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-gray-100">Query Optimization/Performance</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -275,9 +272,9 @@ export default function ExperiencePage() {
                 </div>
               </div>
 
-              <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-lg p-4">
+              <div className="group bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-lg p-4 hover:translate-x-2 transition-transform duration-300">
                 <div className="flex items-start gap-3">
-                  <Code2 className="h-8 w-8 text-green-600 dark:text-green-400" />
+                  <Code2 className="h-8 w-8 text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-gray-100">Document Automation</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -287,9 +284,9 @@ export default function ExperiencePage() {
                 </div>
               </div>
 
-              <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 rounded-lg p-4">
+              <div className="group bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 rounded-lg p-4 hover:translate-x-2 transition-transform duration-300">
                 <div className="flex items-start gap-3">
-                  <Database className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                  <Database className="h-8 w-8 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-gray-100">Seeders using Faker</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -311,16 +308,16 @@ export default function ExperiencePage() {
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">System Design</h4>
                   <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="text-orange-500">▸</span>
+                    <li className="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                      <span className="text-orange-500 group-hover:scale-110 transition-transform duration-300">▸</span>
                       <span>Built notification system architecture from ground up</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-orange-500">▸</span>
+                    <li className="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                      <span className="text-orange-500 group-hover:scale-110 transition-transform duration-300">▸</span>
                       <span>Authorization-driven admin workflows with role management</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-orange-500">▸</span>
+                    <li className="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                      <span className="text-orange-500 group-hover:scale-110 transition-transform duration-300">▸</span>
                       <span>Layered architecture (DTOs, repositories, services) inspired by Spring Boot patterns</span>
                     </li>
                   </ul>
@@ -328,16 +325,16 @@ export default function ExperiencePage() {
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Quality & Performance</h4>
                   <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                    <li className="flex items-center gap-2">
-                      <span className="text-orange-500">▸</span>
+                    <li className="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                      <span className="text-orange-500 group-hover:scale-110 transition-transform duration-300">▸</span>
                       <span>Jest unit tests with e2e memory leak debugging</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-orange-500">▸</span>
+                    <li className="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                      <span className="text-orange-500 group-hover:scale-110 transition-transform duration-300">▸</span>
                       <span>Transactional query patterns for data consistency</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-orange-500">▸</span>
+                    <li className="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+                      <span className="text-orange-500 group-hover:scale-110 transition-transform duration-300">▸</span>
                       <span>CI/CD pipeline optimization for automated workflows</span>
                     </li>
                   </ul>
@@ -370,6 +367,7 @@ export default function ExperiencePage() {
             View Resume
           </a>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { ArrowLeft, Github, ExternalLink, Calendar, User, CheckCircle2 } from 'l
 import { getProjectBySlug, projects } from '@/lib/projects';
 import { formatDate } from '@/lib/utils';
 import type { Metadata } from 'next';
+import PageHero from '@/components/PageHero';
 
 interface PageProps {
   params: Promise<{
@@ -47,11 +48,14 @@ export default async function ProjectPage({ params }: PageProps) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <PageHero title={project.title} subtitle={project.summary} />
+      
+      <div className="max-w-4xl mx-auto px-4 space-y-6">
       {/* Back button */}
       <Link
         href="/"
-        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 mb-6"
+        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500"
       >
         <ArrowLeft className="h-4 w-4 mr-2" />
         Back to all projects
@@ -225,6 +229,7 @@ export default async function ProjectPage({ params }: PageProps) {
           <ArrowLeft className="h-4 w-4 mr-2" />
           View more projects
         </Link>
+      </div>
       </div>
     </div>
   );

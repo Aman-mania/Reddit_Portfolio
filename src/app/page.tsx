@@ -1,5 +1,5 @@
 import { projects } from "@/lib/projects";
-import { TrendingUp, Code2, Award, Briefcase, ArrowRight, CheckCircle2, Trophy, Users, BookOpen, ExternalLink, Calendar } from "lucide-react";
+import { TrendingUp, Code2, Briefcase, ArrowRight, CheckCircle2, Trophy, Users, BookOpen, Calendar } from "lucide-react";
 import Link from "next/link";
 import PostCard from "@/components/PostCard";
 import LeetCodeIcon from "@/components/LeetCodeIcon";
@@ -12,62 +12,54 @@ export default function Home() {
 
   return (
     <div className="space-y-12">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white animate-in fade-in slide-in-from-top-4 duration-700">
-        <div className="flex flex-col items-center text-center md:text-left md:items-start gap-6">
-          <div className="flex-1">
-            <h1 className="text-4xl font-bold mb-2">
-              Welcome to r/Aman_Biswakarma
-            </h1>
-            <p className="text-lg opacity-90 mb-4">
-              Full-stack developer specializing in MERN stack, Spring Boot, and scalable backend systems
-            </p>
-            <div className="flex flex-wrap gap-4 text-sm justify-center md:justify-start">
-              <div className="flex items-center gap-2">
-                <Briefcase className="h-5 w-5" />
-                <span>Software Developer Intern @ Truxie</span>
+      {/* Hero Section with cover image */}
+      <div className="max-w-4xl mx-auto">
+      <div className="relative rounded-lg overflow-hidden animate-in fade-in slide-in-from-top-4 duration-700">
+        <div
+          className="h-56 md:h-72 bg-cover bg-center relative"
+          style={{ backgroundImage: "url('/images/cover 1.png')" }}
+        >
+          {/* dark gradient overlay for readability */}
+          <div className="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+
+          {/* Bottom-left positioned content */}
+          <div className="absolute left-0 bottom-0 z-10 w-full">
+            <div className="px-6 pb-6 md:px-8 md:pb-8 text-white">
+              <div className="max-w-3xl text-left">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">r/Aman_Biswakarma</h1>
+
+                <div className="flex flex-wrap gap-2 md:gap-4 text-xs sm:text-sm">
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <Briefcase className="h-4 w-4 md:h-5 md:w-5" />
+                    <span className="whitespace-nowrap">SDE (Backend) Intern @ Truxie</span>
+                  </div>
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <Code2 className="h-4 w-4 md:h-5 md:w-5" />
+                    <span className="whitespace-nowrap">9+ Major Projects</span>
+                  </div>
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <TrendingUp className="h-4 w-4 md:h-5 md:w-5" />
+                    <a href="https://leetcode.com/aman_kumar04" target="_blank" rel="noopener noreferrer" className="hover:underline inline-flex items-center gap-1 whitespace-nowrap">
+                      <LeetCodeIcon className="h-3 w-3 md:h-4 md:w-4" />
+                      250+ Problems
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 md:gap-3 mt-4 md:mt-6">
+                  <Link href="/about" className="px-4 py-2 text-sm md:text-base bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors font-medium">About Me</Link>
+                  <Link href="/projects" className="px-4 py-2 text-sm md:text-base bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-medium border-2 border-white">View All Projects</Link>
+                  <Link href="/contact" className="px-4 py-2 text-sm md:text-base bg-transparent text-white rounded-lg hover:bg-white/20 transition-colors font-medium border-2 border-white">Contact Me</Link>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Code2 className="h-5 w-5" />
-                <span>9 Major Projects</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="h-5 w-5" />
-                <a 
-                  href="https://leetcode.com/aman_kumar04" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:underline inline-flex items-center gap-1"
-                >
-                  <LeetCodeIcon className="h-4 w-4" />
-                  250+ Problems
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-3 mt-6">
-              <Link 
-                href="/about" 
-                className="px-6 py-2 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors font-medium"
-              >
-                About Me
-              </Link>
-              <Link 
-                href="/projects" 
-                className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-medium border-2 border-white"
-              >
-                View All Projects
-              </Link>
-              <Link 
-                href="/contact" 
-                className="px-6 py-2 bg-transparent text-white rounded-lg hover:bg-white/20 transition-colors font-medium border-2 border-white"
-              >
-                Contact Me
-              </Link>
             </div>
           </div>
         </div>
       </div>
+      </div>
 
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 space-y-8">
       {/* Skills Section - Brief Overview */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
         <div className="flex items-center justify-between mb-6">
@@ -211,8 +203,8 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="flex items-start gap-4 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg border-l-4 border-indigo-500">
-            <Users className="h-6 w-6 text-indigo-500 flex-shrink-0 mt-1" />
+          <div className="group flex items-start gap-4 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg border-l-4 border-indigo-500 hover:translate-x-2 transition-transform duration-300">
+            <Users className="h-6 w-6 text-indigo-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Tech Leadership - R.O.F.I.E.S.</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -220,8 +212,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
-            <TrendingUp className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+          <div className="group flex items-start gap-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500 hover:translate-x-2 transition-transform duration-300">
+            <TrendingUp className="h-6 w-6 text-green-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 inline-flex items-center gap-2">
                 Problem Solving
@@ -232,7 +224,7 @@ export default function Home() {
                   className="text-orange-500 hover:text-orange-600"
                   aria-label="Visit LeetCode Profile"
                 >
-                  <LeetCodeIcon className="h-5 w-5" />
+                  <LeetCodeIcon className="h-5 w-5 hover:scale-110 transition-all duration-200" />
                 </a>
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -240,8 +232,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border-l-4 border-yellow-500">
-            <Trophy className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1" />
+          <div className="group flex items-start gap-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border-l-4 border-yellow-500 hover:translate-x-2 transition-transform duration-300">
+            <Trophy className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Hackathon Winner</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -249,8 +241,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
-            <BookOpen className="h-6 w-6 text-purple-500 flex-shrink-0 mt-1" />
+          <div className="group flex items-start gap-4 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-purple-500 hover:translate-x-2 transition-transform duration-300">
+            <BookOpen className="h-6 w-6 text-purple-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Editorial Team - Eminence'24</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -259,6 +251,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

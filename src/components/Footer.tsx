@@ -84,7 +84,9 @@ export default function Footer() {
                 <LeetCodeIcon className="h-5 w-5" />
               </a>
               <a
-                href="mailto:amanbiswakarma.ak@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=amanbiswakarma.ak@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-orange-500"
                 aria-label="Email"
               >

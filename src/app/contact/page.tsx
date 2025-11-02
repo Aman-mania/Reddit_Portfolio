@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Mail, Linkedin, Github, Send, MapPin, Phone } from 'lucide-react';
+import PageHero from '@/components/PageHero';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -23,15 +25,27 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission (replace with actual API call)
+    setSubmitStatus('idle');
     try {
-      // Here you would typically send data to your API endpoint
-      // For now, we'll just simulate a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const response = await fetch('https://formspree.io/f/mdkpbzrg', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -41,15 +55,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
-        <p className="text-xl opacity-90">
-          Let's discuss your project or opportunity
-        </p>
-      </div>
+    <div className="space-y-8">
+      <PageHero title="r/Get_In_Touch" subtitle={`Let's discuss your project or opportunity`} />
 
+      <div className="max-w-4xl mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-8">
         {/* Contact Information */}
         <div className="space-y-6">
@@ -60,7 +69,9 @@ export default function ContactPage() {
 
             <div className="space-y-4">
               <a
-                href="mailto:amanbiswakarma.ak@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=amanbiswakarma.ak@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors"
               >
                 <Mail className="h-5 w-5 text-orange-500" />
@@ -122,12 +133,12 @@ export default function ContactPage() {
               >
                 View Resume →
               </a>
-              <a
+              <Link
                 href="/"
                 className="block text-orange-500 hover:text-orange-600"
               >
-                View Projects →
-              </a>
+                View Projects &rarr;
+              </Link>
             </div>
           </div>
 
@@ -137,7 +148,7 @@ export default function ContactPage() {
               Available for Opportunities
             </h3>
             <p className="text-sm text-green-800 dark:text-green-200">
-              I'm currently open to full-time positions, freelance projects, and collaborations.
+              I&apos;m currently open to full-time positions, freelance projects, and collaborations.
               Feel free to reach out!
             </p>
           </div>
@@ -184,7 +195,7 @@ export default function ContactPage() {
 
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Subject *
+                Subject&nbsp;*
               </label>
               <input
                 type="text"
@@ -194,7 +205,7 @@ export default function ContactPage() {
                 value={formData.subject}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                placeholder="What's this about?"
+                placeholder="What&apos;s this about?"
               />
             </div>
 
@@ -231,7 +242,7 @@ export default function ContactPage() {
 
             {submitStatus === 'success' && (
               <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-800 dark:text-green-200 text-sm">
-                ✓ Message sent successfully! I'll get back to you soon.
+                ✓ Message sent successfully! I&apos;ll get back to you soon.
               </div>
             )}
 
@@ -243,10 +254,10 @@ export default function ContactPage() {
           </form>
 
           <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-            Note: This is a demo form. To make it functional, you'll need to integrate it with a backend service
-            or use a service like Formspree, EmailJS, or Resend.
+            Note: Your message will be sent as email to me via Formspree.
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

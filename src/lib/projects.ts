@@ -158,7 +158,7 @@ npm run dev
     ],
     tech: ["React", "TypeScript", "Express", "MongoDB", "Mongoose", "Docker"],
     repo: "https://github.com/Aman-mania/Project_Issue_Tracker",
-    demo: "",
+    demo: "https://project-issue-tracker-rle3.onrender.com/",
     images: ["/images/issue-tracker-1.png"],
     tags: ["TypeScript", "Full-stack", "Backend", "MongoDB",  "React", "Project Management", "CRUD"],
     date: "2024-07-15",

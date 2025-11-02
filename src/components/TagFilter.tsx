@@ -62,18 +62,15 @@ export default function TagFilter({ allTags, selectedTags, onTagToggle, onClearA
   const categorizedTags: Record<string, string[]> = {};
   
   allTags.forEach((tag) => {
-    let categorized = false;
     for (const [category, config] of Object.entries(techCategories)) {
       if (config.tags.includes(tag)) {
         if (!categorizedTags[category]) {
           categorizedTags[category] = [];
         }
         categorizedTags[category].push(tag);
-        categorized = true;
         break;
       }
     }
-    // All tags are now categorized, no uncategorized tags
   });
 
   const handleCategoryClick = (category: string) => {

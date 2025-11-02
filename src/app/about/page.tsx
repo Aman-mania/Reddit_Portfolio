@@ -9,44 +9,61 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4">About Me</h1>
-        <p className="text-xl opacity-90">
-          Full-stack (Backend Oriented) Developer | Tech Leader
-        </p>
-      </div>
-
-      {/* Introduction */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-          Hi, I'm Aman Biswakarma
-        </h2>
-        <div className="prose dark:prose-invert max-w-none">
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            I'm a passionate full-stack developer specializing in building scalable web applications
-            using the MERN stack and Spring Boot. With a strong foundation in both frontend and backend
-            technologies, I create comprehensive solutions that solve real-world problems.
-          </p>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            My backend expertise spans across multiple frameworks—from building RESTful microservices with{' '}
-            <span className="font-semibold text-orange-600 dark:text-orange-400">Java Spring Boot</span> and JPA 
-            to developing scalable systems with Node.js and NestJS. I'm particularly drawn to backend architecture, 
-            enjoying the challenge of designing efficient database schemas, optimizing query performance, and 
-            implementing clean layered patterns with DTOs and repositories.
-          </p>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            My journey in software development has been driven by curiosity and a desire to make a
-            positive impact. From developing platforms that connect daily wage laborers with contractors
-            to building digital wallets and logistics management systems, I focus on projects that matter.
-          </p>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Beyond coding, I'm deeply involved in the tech community as the Head of R.O.F.I.E.S. tech club,
-            where I mentor fellow students and organize technical events.
-          </p>
+    <div className="space-y-8">
+      {/* Cover Image Hero - Reddit Style */}
+      <div className="max-w-4xl mx-auto">
+      <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/cover 1.png')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+        </div>
+        <div className="relative h-full flex items-end">
+          <div className="px-4 pb-6 md:pb-10 text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">r/About_Me</h1>
+            <p className="text-lg opacity-90">
+              Full-stack (Backend Oriented) Developer | Tech Leader
+            </p>
+          </div>
         </div>
       </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 space-y-8">
+      {/* Introduction with Profile Photo */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          {/* Profile Photo - Top Right on desktop, centered on mobile */}
+          <div className="float-none md:float-right mb-6 md:ml-6 md:mb-4 flex justify-center md:block">
+            <img
+              src="/images/profile photo.jpg"
+              alt="Aman Biswakarma"
+              className="w-40 h-40 md:w-64 md:h-64 rounded-full object-cover border-4 border-orange-500 shadow-xl ring-4 ring-orange-100 dark:ring-orange-900/30 transition-transform hover:scale-105 duration-300"
+            />
+          </div>
+
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 text-center md:text-left">
+            Hi, I'm Aman Biswakarma
+          </h2>
+          
+          <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
+            <p className="leading-relaxed mb-4">
+              I'm a passionate full-stack developer specializing in building scalable web applications
+              using the <span className="font-semibold text-orange-600 dark:text-orange-400">MERN stack and Java Spring Boot</span>. With a strong foundation in both frontend and backend
+              technologies, I create comprehensive solutions that solve real-world problems.
+            </p>
+            <p className="leading-relaxed mb-4">
+              My journey in software development has been driven by curiosity and a desire to make a
+              positive impact. From developing platforms that connect daily wage laborers with contractors
+              to building digital wallets and logistics management systems, I focus on projects that matter.
+            </p>
+            <p className="leading-relaxed">
+              Beyond coding, I'm deeply involved in the tech community as the Head of R.O.F.I.E.S. tech club,
+              where I mentor fellow students and organize technical events.
+            </p>
+          </div>
+        </div>
 
       {/* Timeline */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
@@ -341,14 +358,14 @@ export default function AboutPage() {
       </div>
 
       {/* Achievements */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
           <Trophy className="h-6 w-6 text-orange-500" />
           Achievements & Highlights
         </h2>
         <div className="space-y-4">
-          <div className="flex items-start gap-4">
-            <Users className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1" />
+          <div className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300">
+            <Users className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Leadership - R.O.F.I.E.S. Tech Club</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -356,8 +373,8 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <TrendingUp className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1" />
+          <div className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300">
+            <TrendingUp className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 inline-flex items-center gap-2">
                 Problem Solving - LeetCode
@@ -365,7 +382,7 @@ export default function AboutPage() {
                   href="https://leetcode.com/aman_kumar04" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:text-orange-600"
+                  className="text-orange-500 hover:text-orange-600 transition-all duration-200 hover:scale-110"
                   aria-label="Visit LeetCode Profile"
                 >
                   <LeetCodeIcon className="h-5 w-5" />
@@ -376,8 +393,8 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Trophy className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1" />
+          <div className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300">
+            <Trophy className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Hackathon Winner</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -385,8 +402,8 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <BookOpen className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1" />
+          <div className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300">
+            <BookOpen className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Editorial Team - Eminence'24</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -394,8 +411,8 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Users className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1" />
+          <div className="flex items-start gap-4 group hover:translate-x-2 transition-transform duration-300">
+            <Users className="h-6 w-6 text-yellow-500 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Marketing & PR Lead - IConclave'23</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -460,6 +477,7 @@ export default function AboutPage() {
             <span>Contributing to open-source projects and building my GitHub profile</span>
           </li>
         </ul>
+      </div>
       </div>
     </div>
   );

@@ -71,7 +71,7 @@ export default function PostFeed({ projects, allTags }: PostFeedProps) {
   return (
     <div className="space-y-6">
       {/* Search and Sort Controls */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 animate-in fade-in slide-in-from-top-3 duration-500">
         <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
           <div className="flex-1 w-full md:w-auto">
             <SearchBar searchQuery={searchQuery} onSearchChange={setSearchQuery} />
@@ -106,8 +106,14 @@ export default function PostFeed({ projects, allTags }: PostFeedProps) {
       {/* Project Cards */}
       <div className="space-y-4">
         {filteredProjects.length > 0 ? (
-          filteredProjects.map((project) => (
-            <PostCard key={project.slug} project={project} />
+          filteredProjects.map((project, index) => (
+            <div
+              key={project.slug}
+              className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <PostCard project={project} />
+            </div>
           ))
         ) : (
           <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">

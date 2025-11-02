@@ -2,20 +2,17 @@
 
 import { Download, FileText, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
+import PageHero from '@/components/PageHero';
 
 export default function ResumePage() {
   const [pdfError, setPdfError] = useState(false);
   const resumePath = '/Aman_Biswakarma_Resume.pdf';
 
   return (
-    <div className="max-w-7xl mx-auto space-y-8">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4">Resume</h1>
-        <p className="text-xl opacity-90">
-          Preview and download my detailed resume
-        </p>
-      </div>
+    <div className="space-y-8">
+      <PageHero title="r/Resume" subtitle="Preview and download my detailed resume" />
+
+      <div className="max-w-4xl mx-auto px-4 space-y-8">
 
       {/* Download Section */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
@@ -226,40 +223,41 @@ export default function ResumePage() {
                 Key Achievements
               </h3>
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                <li className="group flex items-start gap-2 hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-orange-500 mt-1 group-hover:scale-110 transition-transform duration-300">•</span>
                   <span>Head — R.O.F.I.E.S. tech club (IIIT Pune)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                <li className="group flex items-start gap-2 hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-orange-500 mt-1 group-hover:scale-110 transition-transform duration-300">•</span>
                   <span>
                     <a 
                       href="https://leetcode.com/aman_kumar04" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-orange-500 hover:text-orange-600 underline inline-flex items-center gap-1"
+                      className="text-orange-500 hover:text-orange-600 underline inline-flex items-center gap-1 hover:scale-110 transition-all duration-200"
                     >
                       250+ problems solved
                     </a>
                     {' '}with 6+ badges
                   </span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                <li className="group flex items-start gap-2 hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-orange-500 mt-1 group-hover:scale-110 transition-transform duration-300">•</span>
                   <span>2nd place — College hackathon (team project)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                <li className="group flex items-start gap-2 hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-orange-500 mt-1 group-hover:scale-110 transition-transform duration-300">•</span>
                   <span>Core member — Editorial team, Eminence'24 (IIIT Pune)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                <li className="group flex items-start gap-2 hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-orange-500 mt-1 group-hover:scale-110 transition-transform duration-300">•</span>
                   <span>Co-head — Marketing & PR, IConclave'23 (IIIT Pune fest)</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
