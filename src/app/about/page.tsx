@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto">
       <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden">
         <img 
-          src="/images/cover 1.png" 
+          src="/images/Cover%201.png" 
           alt="Hero background"
           className="absolute inset-0 w-full h-full object-cover"
         />

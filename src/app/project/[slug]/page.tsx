@@ -54,7 +54,7 @@ export default async function ProjectPage({ params }: PageProps) {
       <div className="max-w-4xl mx-auto px-4 space-y-6">
       {/* Back button */}
       <Link
-        href="/"
+        href="/projects"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500"
       >
         <ArrowLeft className="h-4 w-4 mr-2" />

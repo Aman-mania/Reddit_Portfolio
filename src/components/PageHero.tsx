@@ -14,7 +14,7 @@ export default function PageHero({ title, subtitle, className = '' }: PageHeroPr
       <div className="h-44 md:h-56 lg:h-64 relative">
         {/* Background Image */}
         <img 
-          src="/images/cover 1.png" 
+          src="/images/Cover%201.png" 
           alt="Hero background"
           className="absolute inset-0 w-full h-full object-cover"
         />
