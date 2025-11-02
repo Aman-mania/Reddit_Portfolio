@@ -13,12 +13,12 @@ export default function AboutPage() {
       {/* Cover Image Hero - Reddit Style */}
       <div className="max-w-4xl mx-auto">
       <div className="relative w-full h-48 md:h-64 rounded-lg overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/cover 1.png')" }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
-        </div>
+        <img 
+          src="/images/cover 1.png" 
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
         <div className="relative h-full flex items-end">
           <div className="px-4 pb-6 md:pb-10 text-white">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">r/About_Me</h1>

@@ -15,10 +15,14 @@ export default function Home() {
       {/* Hero Section with cover image */}
       <div className="max-w-4xl mx-auto">
       <div className="relative rounded-lg overflow-hidden animate-in fade-in slide-in-from-top-4 duration-700">
-        <div
-          className="h-56 md:h-72 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('/images/cover 1.png')" }}
-        >
+        <div className="h-56 md:h-72 relative">
+          {/* Background Image */}
+          <img 
+            src="/images/cover 1.png" 
+            alt="Hero background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          
           {/* dark gradient overlay for readability */}
           <div className="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
 

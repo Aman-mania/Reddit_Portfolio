@@ -11,10 +11,14 @@ export default function PageHero({ title, subtitle, className = '' }: PageHeroPr
   return (
     <div className="max-w-4xl mx-auto">
     <div className={`relative rounded-lg overflow-hidden ${className}`}>
-      <div
-        className="h-44 md:h-56 lg:h-64 bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/images/cover 1.png')" }}
-      >
+      <div className="h-44 md:h-56 lg:h-64 relative">
+        {/* Background Image */}
+        <img 
+          src="/images/cover 1.png" 
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        
         <div className="absolute inset-0 bg-black/45" />
 
         {/* Text container positioned bottom-left */}
