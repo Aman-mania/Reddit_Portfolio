@@ -75,7 +75,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://leetcode.com/aman_kumar04"
+                href="https://leetcode.com/u/aman_kumar_04/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400"

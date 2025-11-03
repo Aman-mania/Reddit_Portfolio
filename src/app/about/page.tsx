@@ -379,7 +379,7 @@ export default function AboutPage() {
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 inline-flex items-center gap-2">
                 Problem Solving - LeetCode
                 <a 
-                  href="https://leetcode.com/aman_kumar04" 
+                  href="https://leetcode.com/u/aman_kumar_04/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:text-orange-600 transition-all duration-200 hover:scale-110"

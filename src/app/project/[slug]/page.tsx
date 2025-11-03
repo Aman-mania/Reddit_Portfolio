@@ -223,7 +223,7 @@ export default async function ProjectPage({ params }: PageProps) {
       {/* Back to projects */}
       <div className="text-center py-8">
         <Link
-          href="/"
+          href="/projects"
           className="inline-flex items-center text-orange-500 hover:text-orange-600 font-medium"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />

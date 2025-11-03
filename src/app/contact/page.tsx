@@ -120,7 +120,7 @@ export default function ContactPage() {
             </h3>
             <div className="space-y-2">
               <a
-                href="https://leetcode.com/aman_kumar04"
+                href="https://leetcode.com/u/aman_kumar_04/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-orange-500 hover:text-orange-600 font-medium block"

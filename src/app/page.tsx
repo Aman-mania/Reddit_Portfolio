@@ -43,7 +43,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-1 md:gap-2">
                     <TrendingUp className="h-4 w-4 md:h-5 md:w-5" />
-                    <a href="https://leetcode.com/aman_kumar04" target="_blank" rel="noopener noreferrer" className="hover:underline inline-flex items-center gap-1 whitespace-nowrap">
+                    <a href="https://leetcode.com/u/aman_kumar_04/" target="_blank" rel="noopener noreferrer" className="hover:underline inline-flex items-center gap-1 whitespace-nowrap">
                       <LeetCodeIcon className="h-3 w-3 md:h-4 md:w-4" />
                       250+ Problems
                     </a>
@@ -222,7 +222,7 @@ export default function Home() {
               <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1 inline-flex items-center gap-2">
                 Problem Solving
                 <a 
-                  href="https://leetcode.com/aman_kumar04" 
+                  href="https://leetcode.com/u/aman_kumar_04/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:text-orange-600"
