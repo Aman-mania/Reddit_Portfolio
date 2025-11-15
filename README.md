@@ -1,8 +1,9 @@
 # Reddit-Themed Portfolio - Aman Biswakarma
 
 A modern, responsive portfolio website styled like Reddit, built with Next.js 15, React, TypeScript, and Tailwind CSS.
+Live on render: https://aman-biswakarma-protfolio.onrender.com/ (Check it out)
 
-## 🚀 Features
+## Features
 
 - **Reddit-Style Feed**: Projects displayed as posts with upvotes, views, and tags
 - **Advanced Search & Filtering**: Fuzzy search with Fuse.js and tag-based filtering
@@ -13,45 +14,13 @@ A modern, responsive portfolio website styled like Reddit, built with Next.js 15
 - **Fast Performance**: Next.js App Router with static generation
 - **Accessible**: ARIA labels, keyboard navigation, and semantic HTML
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Theme**: next-themes
-- **Search**: Fuse.js
-- **Deployment**: Vercel (recommended)
+- **Deployment**: Render [Click on link: https://aman-biswakarma-protfolio.onrender.com/]
 
-## 📁 Project Structure
-
-```
-reddit-portfolio/
-├── src/
-│   ├── app/                    # Next.js App Router pages
-│   │   ├── layout.tsx         # Root layout with theme provider
-│   │   ├── page.tsx           # Home page (feed)
-│   │   ├── about/             # About page
-│   │   ├── contact/           # Contact page
-│   │   ├── resume/            # Resume page
-│   │   └── project/[slug]/    # Dynamic project detail pages
-│   ├── components/            # React components
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   ├── PostCard.tsx       # Reddit-style project card
-│   │   ├── PostFeed.tsx       # Main feed with search/filter
-│   │   ├── SearchBar.tsx
-│   │   ├── TagFilter.tsx
-│   │   └── ThemeProvider.tsx
-│   └── lib/                   # Utilities and data
-│       ├── projects.ts        # Project data (EDIT THIS)
-│       ├── types.ts           # TypeScript types
-│       └── utils.ts           # Helper functions
-├── public/
-│   ├── images/                # Project screenshots
-│   └── Aman_Biswakarma_Resume.pdf  # Your resume PDF
-└── package.json
-```
 
 ## 🏁 Getting Started
 
@@ -70,6 +39,8 @@ npm run dev
 ```
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser
+OR 
+Visit live website on render [https://aman-biswakarma-protfolio.onrender.com/](Portfolio)
 
 ## ✏️ Customization
 
@@ -88,9 +59,7 @@ Place your project screenshots in `public/images/`:
 - `truxie-1.png`
 
 ### 3. Add Your Resume
-
-Place your resume PDF in `public/` folder as:
-- `Aman_Biswakarma_Resume.pdf`
+Drive link
 
 ### 4. Update Personal Information
 
@@ -101,23 +70,6 @@ Place your resume PDF in `public/` folder as:
 - **About Page**: Edit `src/app/about/page.tsx`
 - **Contact Info**: Update links in `src/app/contact/page.tsx`
 - **Meta Tags**: Edit `src/app/layout.tsx` for SEO
-
-## 🚢 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub:
-```bash
-git add .
-git commit -m "Initial portfolio setup"
-git push
-```
-
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Vercel will auto-detect Next.js and deploy
-
-Your portfolio will be live at `your-project.vercel.app`
 
 ## 📝 Available Scripts
 
@@ -140,31 +92,6 @@ npm run lint         # Run ESLint
 - **Resume** (`/resume`): Downloadable resume with summary
 - **Contact** (`/contact`): Contact form and links
 - **Project Detail** (`/project/[slug]`): Individual project pages with full details
-
-## 🎯 Next Steps
-
-1. **Add Images**: Place your project screenshots in `public/images/`
-2. **Add Resume**: Add your PDF resume to `public/`
-3. **Update Links**: Change all placeholder URLs to your actual profiles
-4. **Test Locally**: Run `npm run dev` and verify everything works
-5. **Deploy**: Push to GitHub and deploy on Vercel
-
-## 🐛 Troubleshooting
-
-### Build Errors
-
-If you get type errors during build:
-```bash
-npm run lint
-```
-
-### Images Not Loading
-
-Make sure images are in `public/images/` and referenced as `/images/filename.png` (with leading slash)
-
-### Dark Mode Not Working
-
-The theme provider requires JavaScript. Make sure you're testing in a browser with JS enabled.
 
 ## 📚 Resources
 
