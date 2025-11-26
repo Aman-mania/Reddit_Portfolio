@@ -15,6 +15,10 @@ export default function ResumePage() {
   // Open in new tab link
   const viewPath = `https://drive.google.com/file/d/${driveFileId}/view`;
 
+
+  // Truxie Internship Certificate Google Drive link
+  const truxieCertUrl = 'https://drive.google.com/file/d/1FeK0o5JCplNHQGINpXAP6O3vI2znvoCJ/view?usp=drive_link';
+
   return (
     <div className="space-y-8">
       <PageHero title="r/Resume" subtitle="Preview and download my detailed resume" />
@@ -253,6 +257,65 @@ export default function ResumePage() {
           </div>
         </div>
       </div>
+
+      {/* Certifications (compact) */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 mt-8 mb-0">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Certifications</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+        {/* Truxie Experience Certificate */}
+        <div className="flex flex-col items-center bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-lg p-4 mb-0">
+          <FileText className="h-8 w-8 text-blue-500 mb-2" />
+          <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-1 text-center">Truxie Internship Certificate</h3>
+          <p className="text-gray-600 dark:text-gray-400 text-xs mb-2 text-center">
+            Software Developer Internship at Truxie.
+          </p>
+          <a
+            href={truxieCertUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-2 py-1.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium text-xs"
+          >
+            <ExternalLink className="h-4 w-4 mr-1" />
+            View
+          </a>
+        </div>
+        {/* Spring Boot Certificate */}
+        <div className="flex flex-col items-center bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-lg p-4 mb-0">
+          <FileText className="h-8 w-8 text-green-500 mb-2" />
+          <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-1 text-center">Spring Boot 3, Spring 6 & Hibernate</h3>
+          <p className="text-gray-600 dark:text-gray-400 text-xs mb-2 text-center">
+            Mastery of Spring Boot, Spring, and Hibernate for Java backend apps.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1kReUdiQ7ixys6cgrcihPnE8PUf1l_fEZ/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-2 py-1.5 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium text-xs"
+          >
+            <ExternalLink className="h-4 w-4 mr-1" />
+            View
+          </a>
+        </div>
+        {/* AWS Solutions Architect Certificate */}
+        <div className="flex flex-col items-center bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 rounded-lg p-4 mb-0">
+          <FileText className="h-8 w-8 text-purple-500 mb-2" />
+          <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-1 text-center">AWS Solutions Architect SAA-C03</h3>
+          <p className="text-gray-600 dark:text-gray-400 text-xs mb-2 text-center">
+            In-depth knowledge of AWS core services and cloud architecture.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1mMPDCrVEsG2SRTrlXEz791dCFgSCNdrT/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-2 py-1.5 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors font-medium text-xs"
+          >
+            <ExternalLink className="h-4 w-4 mr-1" />
+            View
+          </a>
+        </div>
+        </div>
+      </div>
+
       </div>
     </div>
   );

@@ -443,6 +443,78 @@ export default function AboutPage() {
         </div>
       </div>
 
+
+      {/* Certifications Section */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+          Certifications
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Truxie Experience Certificate */}
+          <div className="flex flex-col items-center bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-lg p-6">
+            <Award className="h-12 w-12 text-blue-500 mb-4" />
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center">Truxie Internship Certificate</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 text-center">Official certificate for 6-month Software Developer Internship at Truxie, highlighting backend and notification system contributions.</p>
+            <a
+              href="https://drive.google.com/file/d/1mMPDCrVEsG2SRTrlXEz791dCFgSCNdrT/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium text-sm"
+            >
+              View Certificate
+            </a>
+          </div>
+          {/* Udemy Certificate 1 */}
+          <div className="flex flex-col items-center bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-lg p-6">
+            <Award className="h-12 w-12 text-green-500 mb-4" />
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center">[NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 text-center">
+              Practical mastery of Spring Boot 3, Spring 6, and Hibernate for building robust, modern Java backend applications.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1FeK0o5JCplNHQGINpXAP6O3vI2znvoCJ/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium text-sm"
+            >
+              View Certificate
+            </a>
+            <a
+              href="https://www.udemy.com/share/101SFe3@9Fq5YCdZ8Ac3FAvCLqp0GxXJ_Z5RH5TTXajpSuJ4yyvErxdi7sUTZn6Uu3gAyZlc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 text-green-700 dark:text-green-300 underline text-xs hover:text-green-900"
+            >
+              View Course
+            </a>
+          </div>
+          {/* Udemy Certificate 2 */}
+          <div className="flex flex-col items-center bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 rounded-lg p-6">
+            <Award className="h-12 w-12 text-purple-500 mb-4" />
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center">Ultimate AWS Certified Solutions Architect Associate SAA-C03</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 text-center">
+              In-depth knowledge of AWS core services, architecture best practices, and real-world cloud solutions for the SAA-C03 exam.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1kReUdiQ7ixys6cgrcihPnE8PUf1l_fEZ/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors font-medium text-sm"
+            >
+              View Certificate
+            </a>
+            <a
+              href="https://www.udemy.com/share/101WHS3@IBezHHxNYn_eDHruyGYYqm8n7BESQZ6abN45Rn-4gpEbNldlVzZDdfiSG8Jt0iDR/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 text-purple-700 dark:text-purple-300 underline text-xs hover:text-purple-900"
+            >
+              View Course
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* What I'm Working On */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">

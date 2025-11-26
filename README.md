@@ -1,112 +1,52 @@
-# Reddit-Themed Portfolio - Aman Biswakarma
 
-A modern, responsive portfolio website styled like Reddit, built with Next.js 15, React, TypeScript, and Tailwind CSS.
-Live on render: https://aman-biswakarma-protfolio.onrender.com/ (Check it out)
 
-## Features
+# Aman Biswakarma — Reddit-Themed Portfolio
 
-- **Reddit-Style Feed**: Projects displayed as posts with upvotes, views, and tags
-- **Advanced Search & Filtering**: Fuzzy search with Fuse.js and tag-based filtering
-- **Dark Mode**: System-aware theme toggle with next-themes
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **SEO Optimized**: Meta tags, Open Graph, and semantic HTML
-- **Type-Safe**: Built with TypeScript for better developer experience
-- **Fast Performance**: Next.js App Router with static generation
-- **Accessible**: ARIA labels, keyboard navigation, and semantic HTML
+This is my personal portfolio, inspired by Reddit’s design and interaction. It’s a showcase of my projects, skills, certifications, and professional journey, built with Next.js, React, and Tailwind CSS.
+
+## What’s Inside
+
+- **Reddit-Style Project Feed:** All major projects as upvotable posts, with tags, search, and filters.
+- **Certifications:** Dedicated cards for Truxie Internship, Spring Boot & Hibernate, and AWS Solutions Architect, on both About and Resume pages.
+- **Resume:** Always up-to-date, fetched from Google Drive, with preview and download.
+- **About Me:** Bio, skills, timeline, education, achievements, and certifications.
+- **Contact:** Simple contact form and direct links to my profiles.
+- **Project Details:** Each project has its own page with a full write-up, images, and links.
+- **Dark Mode:** Fully responsive and theme-aware, with a Reddit-inspired look.
+
+## Pages
+
+- `/` — Project feed (Reddit style)
+- `/about` — Bio, skills, timeline, certifications
+- `/resume` — Resume preview/download, certifications
+- `/contact` — Contact form and links
+- `/project/[slug]` — Project details
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Deployment**: Render [Click on link: https://aman-biswakarma-protfolio.onrender.com/]
+- Next.js 15 (App Router)
+- React, TypeScript
+- Tailwind CSS
+- Lucide Icons
+- Fuse.js (search)
 
+## Certifications
 
-## 🏁 Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. The project is already initialized in the current directory
-
-2. Run the development server:
-```bash
-npm run dev
-```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
-OR 
-Visit live website on render [https://aman-biswakarma-protfolio.onrender.com/](Portfolio)
-
-## ✏️ Customization
-
-### 1. Update Project Data
-
-Edit `src/lib/projects.ts` to add/modify your projects. I've added your 6 major projects (Connect-U, CONSULO, Auth API, E-Library, Product Service API, Truxie) with detailed information based on your resume.
-
-### 2. Add Project Images
-
-Place your project screenshots in `public/images/`:
-- `connectu-1.png`, `connectu-2.png`
-- `consulo-1.png`
-- `auth-api-1.png`
-- `elibrary-1.png`
-- `product-api-1.png`
-- `truxie-1.png`
-
-### 3. Add Your Resume
-Drive link
-
-### 4. Update Personal Information
-
-- **Header/Footer**: Edit `src/components/Header.tsx` and `src/components/Footer.tsx`
-  - Update GitHub URL: `https://github.com/Aman-mania`
-  - Update LinkedIn URL: `https://linkedin.com/in/aman-biswakarma`
-  - Update email address
-- **About Page**: Edit `src/app/about/page.tsx`
-- **Contact Info**: Update links in `src/app/contact/page.tsx`
-- **Meta Tags**: Edit `src/app/layout.tsx` for SEO
-
-## 📝 Available Scripts
-
-```bash
-# Development
-npm run dev          # Start dev server at localhost:3000
-
-# Production
-npm run build        # Build for production
-npm start            # Start production server
-
-# Code Quality
-npm run lint         # Run ESLint
-```
-
-## 🎨 Current Pages
-
-- **Home** (`/`): Reddit-style feed with all projects, search, and filters
-- **About** (`/about`): Your bio, skills, achievements, and education
-- **Resume** (`/resume`): Downloadable resume with summary
-- **Contact** (`/contact`): Contact form and links
-- **Project Detail** (`/project/[slug]`): Individual project pages with full details
-
-## 📚 Resources
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Lucide Icons](https://lucide.dev)
-- [Vercel Deployment](https://vercel.com/docs)
-
-## 👤 Author
-
-**Aman Biswakarma**
-- GitHub: [@Aman-mania](https://github.com/Aman-mania)
-- LinkedIn: [aman-biswakarma](https://linkedin.com/in/aman-biswakarma)
+All certifications are shown as cards with a short description and a link to the actual certificate. To update, edit the relevant section in `src/app/about/page.tsx` and `src/app/resume/page.tsx`.
 
 ---
 
-**Built with Next.js 15, TypeScript, and Tailwind CSS** 🚀
+## Getting Started
+
+1. Clone the repo and install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+To customize, edit your project data in `src/lib/projects.ts` and update your personal info in the About, Resume, and Contact pages as needed.
 

@@ -88,6 +88,25 @@ export default function ExperiencePage() {
               helped me quickly grasp backend architecture patterns, RESTful API design principles, and layered component structures—concepts 
               I'd previously applied in building production-ready Spring Boot microservices with JPA and MySQL.
             </p>
+            {/* Truxie Internship Certificate Redirect */}
+            <div className="mt-6">
+              <div className="flex items-center gap-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-lg p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m2 0a2 2 0 100-4 2 2 0 000 4zm-2 0a2 2 0 11-4 0 2 2 0 014 0zm-2 0v6m0 0a2 2 0 100-4 2 2 0 000 4zm0 0a2 2 0 110-4 2 2 0 010 4z" /></svg>
+                <div className="flex-1">
+                  <div className="font-semibold text-gray-900 dark:text-gray-100">Internship Experience Certificate</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Official certificate for Software Developer Internship at Truxie</div>
+                </div>
+                <a
+                  href="https://drive.google.com/file/d/1FeK0o5JCplNHQGINpXAP6O3vI2znvoCJ/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium text-sm"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  View Certificate
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Tech Stack */}
